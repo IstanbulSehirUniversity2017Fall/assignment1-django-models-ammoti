@@ -15,7 +15,7 @@ def book(request,book_detail):
         findBook = Book.objects.get(pk=book_detail)
     except:
         raise Http404("This book does not exist")
-    return HttpResponse("This book name is %s" % findBook.title) 
+    return HttpResponse("This book name is :  %s" % findBook.title) 
 
 def home(request):
     """Renders the home page."""
